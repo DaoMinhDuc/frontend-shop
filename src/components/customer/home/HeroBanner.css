@@ -1,0 +1,16 @@
+.hero-title.ant-typography {
+  color: #ffffff !important;
+}
+
+.hero-paragraph.ant-typography {
+  color: #ffffff !important;
+}
+
+.hero-button.ant-btn {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.hero-button.ant-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}

@@ -1,0 +1,173 @@
+/* Product Section Styles */
+.product-section {
+  margin-bottom: 48px;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode styles */
+[data-theme-mode="dark"] .product-section {
+  background-color: #1f1f1f;
+  border: 1px solid #303030;
+}
+
+[data-theme-mode="dark"] .product-section-title {
+  color: rgba(255, 255, 255, 0.85);
+} 
+
+[data-theme-mode="dark"] .product-section-header {
+  border-bottom-color: #303030;
+}
+
+[data-theme-mode="dark"] .product-section-error {
+  background: #2a1215;
+  border-color: #431418;
+  color: #ff4d4f;
+}
+
+.product-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.product-section-title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.product-section-title-icon {
+  margin-right: 12px;
+  font-size: 24px;
+  color: #1890ff;
+}
+
+.product-section-view-all {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-section-loading {
+  text-align: center;
+  padding: 64px 0;
+}
+
+.product-section-error {
+  text-align: center;
+  padding: 32px;
+  background: #fff1f0;
+  border-radius: 8px;
+  border: 1px solid #ffccc7;
+}
+
+/* Product Cards */
+.product-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-title:hover {
+  color: #1890ff !important;
+}
+
+/* Rating styles */
+.product-card .ant-rate {
+  font-size: 12px;
+  color: #fadb14;
+}
+
+/* Add to cart button hover */
+.product-card .ant-btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* Loading state */
+.product-card.ant-card-loading .ant-card-body {
+  padding: 24px;
+}
+
+/* Product card actions */
+.product-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.wishlist-button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 2px 8px;
+  transition: all 0.3s;
+}
+
+.wishlist-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.wishlist-button.in-wishlist {
+  color: #f5222d;
+}
+
+/* Product rating in card meta */
+.product-rating-card-meta {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.product-rating-card-meta .ant-rate {
+  font-size: 12px;
+}
+
+/* Card footer with rating and wishlist */
+.product-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.wishlist-button-meta {
+  padding: 0 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.wishlist-button-meta:hover {
+  background-color: #ffeaea;
+}
+
+.wishlist-button-meta.in-wishlist {
+  color: #fff;
+  background-color: #f5222d;
+}
+
+.wishlist-button-meta.in-wishlist:hover {
+  background-color: #ff4d4f;
+  opacity: 0.9;
+}

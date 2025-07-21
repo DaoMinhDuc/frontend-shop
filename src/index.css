@@ -1,0 +1,47 @@
+/* Base styles */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f0f2f5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* CSS custom properties for dynamic theming */
+  --ant-color-primary: #1677ff;
+  --ant-color-success: #52c41a;
+  --ant-color-warning: #faad14;
+  --ant-color-error: #ff4d4f;
+  --ant-color-info: #1677ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Make Ant Design header text white when not customized */
+.ant-layout-header h1,
+.ant-layout-header h2,
+.ant-layout-header h3,
+.ant-layout-header h4,
+.ant-layout-header h5 {
+  color: #fff;
+  margin: 0;
+}
+
+/* Default header styling */
+.ant-layout-header {
+  background: #1677ff;
+  height: 64px;
+  line-height: 64px;
+  display: flex;
+  align-items: center;
+}

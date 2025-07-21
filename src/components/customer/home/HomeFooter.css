@@ -1,0 +1,30 @@
+.home-footer {
+  background: #001529;
+  padding: 40px 24px 24px;
+}
+
+.home-footer .ant-typography,
+.home-footer .ant-typography a,
+.home-footer .ant-typography div,
+.home-footer .ant-typography span {
+  color: #ffffff !important;
+}
+
+.home-footer .ant-divider {
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* Override any theme color changes */
+[data-theme-mode="dark"] .home-footer .ant-typography,
+[data-theme-mode="light"] .home-footer .ant-typography {
+  color: #ffffff !important;
+}
+
+[data-theme-mode="dark"] .home-footer a,
+[data-theme-mode="light"] .home-footer a {
+  color: #ffffff !important;
+}
+
+.home-footer a:hover {
+  opacity: 0.8;
+}

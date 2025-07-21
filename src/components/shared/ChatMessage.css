@@ -1,0 +1,75 @@
+.message-container {
+  display: flex;
+  align-items: flex-start;
+  margin: 8px 0;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.message-container-current-user {
+  justify-content: flex-end;
+}
+
+.message-container-current-user .message-content {
+  align-items: flex-end;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  background-color: white;
+  color: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.message-bubble-current-user {
+  background-color: var(--ant-color-primary, #1677ff);
+  color: white;
+  border-bottom-right-radius: 4px;
+  align-self: flex-end;
+}
+
+.message-bubble:not(.message-bubble-current-user) {
+  border-bottom-left-radius: 4px;
+  border: 1px solid var(--ant-color-border, #e8e8e8);
+}
+
+.message-meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.message-meta-current-user {
+  justify-content: flex-end;
+}
+
+.read-receipt {
+  margin-left: 4px;
+  color: var(--ant-color-success, #52c41a);
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.message-sender-name {
+  font-size: 12px;
+  padding-left: 15px;
+  color: var(--ant-color-text-secondary, rgba(0, 0, 0, 0.45));
+}
+
+/* Remove these styles as they're now handled inline */
+.message-time {
+  font-size: 11px;
+}
+
+/* Time color is now handled via inline styles in the component */

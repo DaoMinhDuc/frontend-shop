@@ -1,0 +1,31 @@
+.category-page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 0 40px;
+}
+
+.filter-sidebar {
+  position: sticky;
+  top: 80px;
+}
+
+.filter-section {
+  margin-bottom: 16px;
+}
+
+.filter-section:last-child {
+  margin-bottom: 0;
+}
+
+.filter-tag {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .filter-sidebar {
+    position: static;
+    margin-bottom: 24px;
+  }
+}

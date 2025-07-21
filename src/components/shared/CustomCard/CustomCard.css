@@ -1,0 +1,54 @@
+.custom-card-container {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.custom-card {
+  display: block;
+  width: 100%;
+  transition: all 0.3s;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.custom-card-content {
+  min-width: min-content; 
+  width: 100%;
+}
+
+.custom-card::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.custom-card::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.custom-card::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark mode support */
+body.dark .custom-card::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+body.dark .custom-card::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+body.dark .custom-card::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* Hide scrollbar when not needed */
+.custom-card.no-scroll {
+  overflow-x: hidden;
+}

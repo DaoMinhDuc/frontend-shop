@@ -1,0 +1,542 @@
+/* Enhanced theming for inputs and tables with dark/light mode support */
+
+/* Global transition for smooth theme switching */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Input styling enhancements */
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important;
+}
+
+/* Light mode input styling */
+[data-theme-mode="light"] .ant-input,
+[data-theme-mode="light"] .ant-input-affix-wrapper,
+[data-theme-mode="light"] .ant-select-selector,
+[data-theme-mode="light"] .ant-textarea {
+  border-color: #d9d9d9 !important;
+  background-color: #ffffff !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+[data-theme-mode="light"] .ant-input:hover,
+[data-theme-mode="light"] .ant-input-affix-wrapper:hover,
+[data-theme-mode="light"] .ant-select-selector:hover,
+[data-theme-mode="light"] .ant-textarea:hover {
+  border-color: var(--ant-color-primary) !important;
+}
+
+[data-theme-mode="light"] .ant-input:focus,
+[data-theme-mode="light"] .ant-input-affix-wrapper-focused,
+[data-theme-mode="light"] .ant-select-focused .ant-select-selector,
+[data-theme-mode="light"] .ant-textarea:focus {
+  border-color: var(--ant-color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+}
+
+/* Dark mode input styling */
+[data-theme-mode="dark"] .ant-input,
+[data-theme-mode="dark"] .ant-input-affix-wrapper,
+[data-theme-mode="dark"] .ant-select-selector,
+[data-theme-mode="dark"] .ant-textarea {
+  border-color: #434343 !important;
+  background-color: #1f1f1f !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme-mode="dark"] .ant-input:hover,
+[data-theme-mode="dark"] .ant-input-affix-wrapper:hover,
+[data-theme-mode="dark"] .ant-select-selector:hover,
+[data-theme-mode="dark"] .ant-textarea:hover {
+  border-color: var(--ant-color-primary) !important;
+}
+
+[data-theme-mode="dark"] .ant-input:focus,
+[data-theme-mode="dark"] .ant-input-affix-wrapper-focused,
+[data-theme-mode="dark"] .ant-select-focused .ant-select-selector,
+[data-theme-mode="dark"] .ant-textarea:focus {
+  border-color: var(--ant-color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme-mode="dark"] .ant-input::placeholder,
+[data-theme-mode="dark"] .ant-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Table styling enhancements */
+.ant-table {
+  transition: background-color 0.3s ease !important;
+}
+
+/* Light mode table styling */
+[data-theme-mode="light"] .ant-table {
+  background-color: #ffffff !important;
+}
+
+[data-theme-mode="light"] .ant-table-thead > tr > th {
+  background-color: #fafafa !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+[data-theme-mode="light"] .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #f0f0f0 !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+[data-theme-mode="light"] .ant-table-tbody > tr:hover > td {
+  background-color: #f5f5f5 !important;
+}
+
+[data-theme-mode="light"] .ant-table-tbody > tr.ant-table-row-selected > td {
+  background-color: #e6f7ff !important;
+}
+
+/* Dark mode table styling */
+[data-theme-mode="dark"] .ant-table {
+  background-color: #141414 !important;
+}
+
+[data-theme-mode="dark"] .ant-table-thead > tr > th {
+  background-color: #1f1f1f !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  border-bottom: 1px solid #303030 !important;
+}
+
+[data-theme-mode="dark"] .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #303030 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  background-color: #141414 !important;
+}
+
+[data-theme-mode="dark"] .ant-table-tbody > tr:hover > td {
+  background-color: #262626 !important;
+}
+
+[data-theme-mode="dark"] .ant-table-tbody > tr.ant-table-row-selected > td {
+  background-color: #1f1f1f !important;
+}
+
+/* Table pagination styling */
+[data-theme-mode="dark"] .ant-pagination .ant-pagination-item {
+  background-color: #1f1f1f !important;
+  border-color: #303030 !important;
+}
+
+[data-theme-mode="dark"] .ant-pagination .ant-pagination-item a {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme-mode="dark"] .ant-pagination .ant-pagination-item:hover {
+  border-color: var(--ant-color-primary) !important;
+}
+
+[data-theme-mode="dark"] .ant-pagination .ant-pagination-item-active {
+  background-color: var(--ant-color-primary) !important;
+  border-color: var(--ant-color-primary) !important;
+}
+
+[data-theme-mode="dark"] .ant-pagination .ant-pagination-item-active a {
+  color: #ffffff !important;
+}
+
+/* Search input specific styling */
+.ant-input-search .ant-input-group .ant-input-affix-wrapper,
+.ant-input-search .ant-input-group .ant-input {
+  transition: all 0.3s ease !important;
+}
+
+[data-theme-mode="dark"] .ant-input-search .ant-input-group .ant-input-affix-wrapper:hover,
+[data-theme-mode="dark"] .ant-input-search .ant-input-group .ant-input:hover {
+  border-color: var(--ant-color-primary) !important;
+}
+
+/* Form label styling */
+[data-theme-mode="dark"] .ant-form-item-label > label {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme-mode="light"] .ant-form-item-label > label {
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+/* Select dropdown styling */
+[data-theme-mode="dark"] .ant-select-dropdown {
+  background-color: #1f1f1f !important;
+  border: 1px solid #303030 !important;
+}
+
+[data-theme-mode="dark"] .ant-select-item {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme-mode="dark"] .ant-select-item-option-selected {
+  background-color: #262626 !important;
+}
+
+[data-theme-mode="dark"] .ant-select-item-option-active {
+  background-color: #1f1f1f !important;
+}
+
+/* Enhanced contrast for better visibility */
+[data-theme-mode="dark"] .ant-input-affix-wrapper .ant-input-prefix,
+[data-theme-mode="dark"] .ant-input-affix-wrapper .ant-input-suffix {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+[data-theme-mode="light"] .ant-input-affix-wrapper .ant-input-prefix,
+[data-theme-mode="light"] .ant-input-affix-wrapper .ant-input-suffix {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Disabled state styling */
+[data-theme-mode="dark"] .ant-input:disabled,
+[data-theme-mode="dark"] .ant-input-affix-wrapper.ant-input-affix-wrapper-disabled,
+[data-theme-mode="dark"] .ant-select-disabled .ant-select-selector {
+  background-color: #262626 !important;
+  border-color: #303030 !important;
+  color: rgba(255, 255, 255, 0.25) !important;
+}
+
+[data-theme-mode="light"] .ant-input:disabled,
+[data-theme-mode="light"] .ant-input-affix-wrapper.ant-input-affix-wrapper-disabled,
+[data-theme-mode="light"] .ant-select-disabled .ant-select-selector {
+  background-color: #f5f5f5 !important;
+  border-color: #d9d9d9 !important;
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Text styling to replace removed type="secondary" */
+.ant-typography {
+  color: inherit !important;
+}
+
+[data-theme-mode="light"] .ant-typography {
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+[data-theme-mode="dark"] .ant-typography {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Secondary text styling for elements that need muted appearance */
+.text-secondary,
+.message-sender-name {
+  opacity: 0.65;
+}
+
+[data-theme-mode="light"] .text-secondary,
+[data-theme-mode="light"] .message-sender-name {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme-mode="dark"] .text-secondary,
+[data-theme-mode="dark"] .message-sender-name {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Chat message styling */
+[data-theme-mode="dark"] .message-bubble:not(.message-bubble-current-user) {
+  background-color: #1f1f1f !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid #303030 !important;
+}
+
+[data-theme-mode="light"] .message-bubble:not(.message-bubble-current-user) {
+  background-color: #ffffff !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+  border: 1px solid #f0f0f0 !important;
+}
+
+/* Card styling improvements */
+[data-theme-mode="dark"] .ant-card {
+  background-color: #1f1f1f !important;
+  border-color: #303030 !important;
+}
+
+[data-theme-mode="dark"] .ant-card-head {
+  background-color: #1f1f1f !important;
+  border-bottom-color: #303030 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme-mode="dark"] .ant-card-head-title {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme-mode="dark"] .ant-card-body {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Chat layout dark mode styling */
+[data-theme-mode="dark"] .chat-layout {
+  border-color: #303030 !important;
+  background-color: #141414 !important;
+}
+
+[data-theme-mode="dark"] .chat-main {
+  background-color: #141414 !important;
+}
+
+[data-theme-mode="dark"] .messages-container {
+  background-color: #141414 !important;
+}
+
+[data-theme-mode="dark"] .message-input-container {
+  background-color: #1f1f1f !important;
+  border-top-color: #303030 !important;
+}
+
+[data-theme-mode="dark"] .chat-top-bar {
+  border-bottom-color: #303030 !important;
+  background-color: #1f1f1f !important;
+}
+
+[data-theme-mode="dark"] .chat-sidebar {
+  border-right-color: #303030 !important;
+  background-color: #1f1f1f !important;
+}
+
+[data-theme-mode="dark"] .chat-header,
+[data-theme-mode="dark"] .chat-header-search {
+  border-bottom-color: #303030 !important;
+  background-color: #1f1f1f !important;
+}
+
+[data-theme-mode="dark"] .chat-empty-state {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+[data-theme-mode="dark"] .chat-closed-state {
+  background-color: #262626 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme-mode="dark"] .input-action-button {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+[data-theme-mode="dark"] .input-action-button:hover {
+  color: var(--ant-color-primary) !important;
+}
+
+[data-theme-mode="dark"] .chat-item {
+  border-bottom-color: #303030 !important;
+}
+
+[data-theme-mode="dark"] .chat-item:hover {
+  background-color: #262626 !important;
+}
+
+[data-theme-mode="dark"] .chat-item.active {
+  background-color: rgba(22, 119, 255, 0.15) !important;
+}
+
+[data-theme-mode="dark"] .chat-item.active:hover {
+  background-color: rgba(22, 119, 255, 0.15) !important;
+}
+
+[data-theme-mode="dark"] .customer-info-panel {
+  background-color: #1f1f1f !important;
+  border-left-color: #303030 !important;
+}
+
+/* Light mode chat styling for consistency */
+[data-theme-mode="light"] .chat-layout {
+  border-color: #f0f0f0 !important;
+  background-color: #ffffff !important;
+}
+
+[data-theme-mode="light"] .chat-main {
+  background-color: #f9f9f9 !important;
+}
+
+[data-theme-mode="light"] .messages-container {
+  background-color: #f9f9f9 !important;
+}
+
+[data-theme-mode="light"] .message-input-container {
+  background-color: #ffffff !important;
+  border-top-color: #f0f0f0 !important;
+}
+
+[data-theme-mode="light"] .chat-top-bar {
+  border-bottom-color: #f0f0f0 !important;
+  background-color: #ffffff !important;
+}
+
+[data-theme-mode="light"] .chat-sidebar {
+  border-right-color: #f0f0f0 !important;
+  background-color: #ffffff !important;
+}
+
+[data-theme-mode="light"] .chat-header,
+[data-theme-mode="light"] .chat-header-search {
+  border-bottom-color: #f0f0f0 !important;
+  background-color: #ffffff !important;
+}
+
+[data-theme-mode="light"] .chat-empty-state {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme-mode="light"] .chat-closed-state {
+  background-color: #f5f5f5 !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+[data-theme-mode="light"] .input-action-button {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme-mode="light"] .input-action-button:hover {
+  color: var(--ant-color-primary) !important;
+}
+
+[data-theme-mode="light"] .chat-item {
+  border-bottom-color: #f0f0f0 !important;
+}
+
+[data-theme-mode="light"] .chat-item:hover {
+  background-color: #f5f5f5 !important;
+}
+
+[data-theme-mode="light"] .chat-item.active {
+  background-color: #e6f7ff !important;
+}
+
+[data-theme-mode="light"] .chat-item.active:hover {
+  background-color: #e6f7ff !important;
+}
+
+[data-theme-mode="light"] .customer-info-panel {
+  background-color: #fafafa !important;
+  border-left-color: #f0f0f0 !important;
+}
+
+/* Enhanced contrast for better visibility */
+
+/* CustomerChatWidget specific dark mode enhancements */
+[data-theme-mode="dark"] .chat-widget .chat-window {
+  background-color: #1f1f1f !important;
+  border-color: #303030 !important;
+}
+
+[data-theme-mode="dark"] .chat-widget .chat-header {
+  background: linear-gradient(135deg, var(--ant-color-primary) 0%, var(--ant-color-primary-dark) 100%) !important;
+  border-bottom-color: #303030 !important;
+}
+
+[data-theme-mode="dark"] .chat-widget .messages-container {
+  background-color: #141414 !important;
+}
+
+[data-theme-mode="dark"] .chat-widget .message-input-container {
+  background: linear-gradient(to right, #1f1f1f, #262626) !important;
+  border-top-color: #303030 !important;
+}
+
+[data-theme-mode="dark"] .chat-widget .new-chat-container {
+  background-color: #1f1f1f !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme-mode="dark"] .chat-widget .message-bubble {
+  background-color: #262626 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  border-color: #434343 !important;
+}
+
+[data-theme-mode="dark"] .chat-widget .message-bubble-current-user {
+  background-color: var(--ant-color-primary) !important;
+  color: white !important;
+}
+
+[data-theme-mode="dark"] .chat-widget .empty-messages,
+[data-theme-mode="dark"] .chat-widget .loading-container {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+[data-theme-mode="dark"] .chat-widget .chat-status-indicator {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme-mode="dark"] .chat-widget .close-button {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-theme-mode="dark"] .chat-widget .close-button:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Light mode improvements for CustomerChatWidget */
+[data-theme-mode="light"] .chat-widget .messages-container {
+  background-color: #fafafa !important;
+}
+
+[data-theme-mode="light"] .chat-widget .message-input-container {
+  background: linear-gradient(to right, #fafbfc, #f8f9fa) !important;
+}
+
+[data-theme-mode="light"] .chat-widget .message-bubble {
+  background-color: #f5f5f5 !important;
+  border-color: #e8e8e8 !important;
+}
+
+/* ProductDetail wishlist button styling */
+[data-theme-mode="dark"] .wishlist-button {
+  background-color: #262626 !important;
+  border-color: #434343 !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+[data-theme-mode="dark"] .wishlist-button:hover {
+  background-color: #ff4d4f !important;
+  border-color: #ff4d4f !important;
+  color: white !important;
+}
+
+[data-theme-mode="dark"] .wishlist-button:focus,
+[data-theme-mode="dark"] .wishlist-button.favorited {
+  background-color: #2a1215 !important;
+  border-color: #ff4d4f !important;
+  color: #ff4d4f !important;
+}
+
+[data-theme-mode="dark"] .wishlist-button.favorited:hover {
+  background-color: #ff4d4f !important;
+  border-color: #ff4d4f !important;
+  color: white !important;
+}
+
+/* Light mode wishlist button improvements */
+[data-theme-mode="light"] .wishlist-button {
+  background-color: #f5f5f5 !important;
+  border-color: #d9d9d9 !important;
+  color: #595959 !important;
+}
+
+[data-theme-mode="light"] .wishlist-button:hover {
+  background-color: #ff4d4f !important;
+  border-color: #ff4d4f !important;
+  color: white !important;
+}
+
+[data-theme-mode="light"] .wishlist-button:focus,
+[data-theme-mode="light"] .wishlist-button.favorited {
+  background-color: #fff2f0 !important;
+  border-color: #ff4d4f !important;
+  color: #ff4d4f !important;
+}
+
+[data-theme-mode="light"] .wishlist-button.favorited:hover {
+  background-color: #ff4d4f !important;
+  border-color: #ff4d4f !important;
+  color: white !important;
+}
